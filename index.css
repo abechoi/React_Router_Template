@@ -71,6 +71,12 @@ li{
 }
 .project-card{
   margin: 15px;
+  padding: 10px;
   border: 1px solid black;
   width: 250px;
+  height: 100%;
+}
+.project-card p{
+  font-weight: normal;
+  font-size: 20px;
 }
