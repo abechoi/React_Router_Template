@@ -1,23 +1,37 @@
 import React from 'react';
 import projects from "./data/projects";
-import { Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import ProjectCard from "./ProjectCard";
+import ProjectDetails from "./ProjectDetails";
 
 const Projects = () => {
   return (
     <section>
-    
-
       <h1>PROJECTS</h1>
-      <ul className="projects-grid">
-        { projects.map((project) => (
-          
-          <ProjectCard project={project}/>
 
- 
+      <Router>
+
+      <Switch>
+        { projects.map((project) => (
+
+          <Route path={project.url}>
+            <ProjectDetails project={project}/>
+          </Route>
+          
         ))}
+      </Switch>   
+
+      <ul className="projects-grid">
+
+        { projects.map((project) => (
+          <ProjectCard project={project}/>
+        ))}
+
       </ul>
 
+      
+
+      </Router>
 
     </section>
   );
