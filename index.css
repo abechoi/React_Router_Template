@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #ddd;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+section{
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+  top: 100px;
+  z-index: 0;
+}
+nav{
+  top: 0;
+  z-index: 1;
+  position: sticky;
+  display: flex;
+  height: 75px;
+  width: 100%;
+  border: 5px black solid;
+}
+a{
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: bold;
+  color: black;
+}
+li{
+  text-decoration: none;
+  list-style-type: none;
+}
+.logo{
+  width: 10%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px black solid;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+.navlinks{
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto auto auto auto;
+  list-style-type: none;
+  border: 1px black solid;
+  margin: 0;
+  width: 75%;
+  height: 100%;
+}
+.projects-grid{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+.project-card{
+  margin: 15px;
+  border: 1px solid black;
+  width: 250px;
+}
