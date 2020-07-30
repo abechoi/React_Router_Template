@@ -80,6 +80,8 @@ li{
   font-weight: normal;
   font-size: 20px;
 }
-.test-section{
-  background-color: red;
+.projects-details{
+  border: 1px solid black;
+  top: 0;
+  height: 100%;
 }

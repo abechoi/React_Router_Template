@@ -7,32 +7,24 @@ import ProjectDetails from "./ProjectDetails";
 const Projects = () => {
   return (
     <section>
-      <h1>PROJECTS</h1>
-
-      <Router>
-
-      <Switch>
-        { projects.map((project) => (
-
-          <Route path={project.url}>
-            <ProjectDetails project={project}/>
-          </Route>
-          
-        ))}
-      </Switch>   
 
       <ul className="projects-grid">
-
         { projects.map((project) => (
           <ProjectCard project={project}/>
         ))}
-
       </ul>
 
-      
+      <Router>
+        <Switch>
+          { projects.map((project) => (
 
+            <Route path={project.url}>
+              <ProjectDetails project={project}/>
+            </Route>
+            
+          ))}
+        </Switch>   
       </Router>
-
     </section>
   );
 }
