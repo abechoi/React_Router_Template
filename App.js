@@ -5,6 +5,9 @@ import Home from "./Home";
 import Projects from "./Projects";
 import Blogs from "./Blogs";
 import About from "./About";
+import ProjectDetails from "./ProjectDetails";
+import projects from "./data/projects";
+
 
 const App = () => {
 
@@ -17,6 +20,13 @@ const App = () => {
           <Route path="/blogs"><Blogs/></Route>
           <Route path="/projects"><Projects/></Route>
           <Route path="/about"><About/></Route>
+          { projects.map((project) => (
+
+            <Route path={project.url}>
+              <ProjectDetails project={project} key={project.id}/>
+            </Route>
+            
+          ))}
         </Switch>
       </Router>
     </div>

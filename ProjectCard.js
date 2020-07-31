@@ -6,7 +6,7 @@ const ProjectCard = ({project}) => {
 
   return (
     <Link to={project.url}>
-      <li className="project-card" key={project.id}>
+      <li className="project-card">
         <h3>{ project.title }</h3>
         <p>{ project.createdAt }</p>
         <p>{ project.info }</p>
